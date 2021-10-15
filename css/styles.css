@@ -548,14 +548,15 @@ body {
   height: 50px;
   margin-right: 12px;
   padding: 15px 16px;
-  background-color: inherit;
+  background-color: transparent;
+  color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
 .email-subscription::placeholder {
-  color:rgba(255, 255, 255, 0,6);
+  color: rgba(255, 255, 255, 0, 6);
 }
 
 .email-subscription:not(:placeholder-shown) {
@@ -806,7 +807,10 @@ body {
   padding: 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: border var(--transition-duration) var(--transition-timing-function);
+  background-color: transparent;
+  outline: none;
+  transition: border var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 textarea.input {
@@ -845,9 +849,6 @@ textarea.input {
 }
 
 .agreement-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -856,10 +857,33 @@ textarea.input {
 }
 
 .agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--second-color);
+}
+
+.agreement span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  margin-right: 8px;
+  transition: border-color var(--transition-duration)
+      var(--transition-timing-function),
+    background-color var(--transition-duration)
+      var(--transition-timing-function);
+}
+
+.agreement-check:checked + .agreement span {
+  background-color: var(--mark-color);
+  border-color: var(--mark-color);
 }
 
 .agrrement-link {
@@ -877,8 +901,8 @@ textarea.input {
   text-align: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color var(--transition-duration)
-    var(--transition-timing-function), box-shadow var(--transition-duration)
-    var(--transition-timing-function);
+      var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .btn-modal:hover,
@@ -886,4 +910,3 @@ textarea.input {
   background-color: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-

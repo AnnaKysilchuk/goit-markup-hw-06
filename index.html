@@ -430,7 +430,7 @@
                             id="name" 
                             class="input">
                         <div class="modal-icon-block">
-                            <svg class="modal-icon" width="12px" height="12px">
+                            <svg class="modal-icon" width="12" height="12">
                                 <use href="./images/icons.svg#icon-name">
                             </svg>
                         </div>
@@ -439,9 +439,14 @@
                 <div class="input-area-block">
                     <label for="phone-number">Телефон</label>
                     <div class="input-area">
-                        <input type="tel" name="phone-number" placeholder=" " id="phone-number" class="input">
+                        <input 
+                            type="tel" 
+                            name="phone-number" 
+                            placeholder=" " 
+                            id="phone-number" 
+                            class="input">
                         <div class="modal-icon-block">
-                            <svg class="modal-icon" width="13px" height="13px">
+                            <svg class="modal-icon" width="13" height="13">
                                 <use href="./images/icons.svg#icon-tel">
                             </svg>
                         </div>
@@ -450,9 +455,14 @@
                 <div class="input-area-block">
                     <label for="email">Почта</label>
                     <div class="input-area">
-                        <input type="email" name="email" placeholder=" " id="email" class="input">
+                        <input 
+                            type="email" 
+                            name="email" 
+                            placeholder=" " 
+                            id="email" 
+                            class="input">
                         <div class="modal-icon-block">
-                            <svg class="modal-icon" width="15px" height="12px">
+                            <svg class="modal-icon" width="15" height="12">
                                 <use href="./images/icons.svg#icon-mail">
                             </svg>
                         </div>
@@ -460,11 +470,22 @@
                 </div>
                 <div class="input-area-block">
                     <label for="comment">Комментарий</label>
-                    <textarea name="comment" id="comment" placeholder="Введите текст" class="input"></textarea>
+                    <textarea 
+                        name="comment" 
+                        id="comment" 
+                        placeholder="Введите текст" 
+                        class="input"></textarea>
                 </div>
                 <div class="agreement-block">
-                    <input type="checkbox" id="agreement">
-                    <label for="agreement" class="agreement">Соглашаюсь с рассылкой и принимаю <a href="" class="agrrement-link">Условия договора</a></label>
+                    <input type="checkbox" id="agreement" class="agreement-check visually-hidden">
+                    <label for="agreement" class="agreement">
+                        <span>
+                            <svg class="done-icon" width="11" height="8">
+                                <use href="./images/icons.svg#icon-done">
+                            </svg>
+                        </span>
+                        Соглашаюсь с рассылкой и принимаю&nbsp;<a href="" class="agrrement-link">Условия договора</a>
+                    </label>
                 </div>
                 <div class="btn-modal-box">
                     <button type="submit" class="btn btn-modal">Отправить</button>
