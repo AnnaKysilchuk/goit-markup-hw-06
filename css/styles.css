@@ -837,14 +837,20 @@ textarea.input {
 }
 
 .input-area:hover .input,
-.input-area:focus .input,
 .input:not(:placeholder-shown) {
   border: 1px solid var(--mark-color);
 }
 
 .input-area:hover .modal-icon,
-.input-area:focus .modal-icon,
 .input:not(:placeholder-shown) + .modal-icon-block .modal-icon {
+  fill: var(--mark-color);
+}
+
+.input:focus {
+  border: 1px solid var(--mark-color);
+}
+
+.input:focus + .modal-icon-block .modal-icon {
   fill: var(--mark-color);
 }
 
